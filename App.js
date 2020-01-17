@@ -14,7 +14,7 @@ function App() {
   const [number, setNumber] = useState(0);
   function addNumber(){
     const number = getRandomNum();
-    setNumber({number})
+    setNumber([...numArray, number]);
     console.log(numArray);
   }
   return (
