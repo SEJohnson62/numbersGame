@@ -7,15 +7,23 @@ function getRandomNum () {
   const randomNum = Math.floor(Math.random()*10);
   console.log(randomNum);
   numArray.push(randomNum);
-  return;
+  return randomNum;
 }
 
 function App() {
-  const [count, addCount] = useState(0);
-
+  const [number, setNumber] = useState(0);
+  function addNumber(){
+    const number = getRandomNum();
+    setNumber({number})
+    console.log(numArray);
+  }
   return (
     <div>
-      <button onClick={getRandomNum}>Add Number</button>
+      <button onClick={addNumber}>Add Number</button>
+      <h2>All {numArray.length} Numbers</h2>
+      <ul>
+
+      </ul>
     </div>
   );
 }
